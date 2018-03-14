@@ -1,18 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Hola</title>
+<title>Webtowapa - El Chancho que todo lo ve</title>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
-* {
-  box-sizing: border-box;
-}
-body {
+.body {
   color: white;
   font: italic 1.2em "Fira Sans", serif;
   background-image: url('https://redescubriendoelidioma.files.wordpress.com/2016/01/chancho.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-div {
+.div {
   border-radius: 10px;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
   position: relative;
@@ -21,17 +26,44 @@ div {
   height: 100%;
   padding: 15px;
 }
-p {
+.p {
   position: absolute;
   right: 10px;
   bottom: 10px;
 }
+.philosophy__container {
+  position: relative;
+}
+.pork_philosophy {
+  position: absolute;
+  bottom: 10px;
+}
+@media (max-width: 575.98px) {
+  .philosophy__container {
+    position: static;
+  }
+  .pork_philosophy {
+    position: static;
+    bottom: 0;
+  }
+}
 </style>
 </head>
 <body>
-  <div>
-    <h1>Las heridas</h1>
-    <p>Las heridas que la guerra causa en el alma, esas no las cura la alquimia</p>
+  <div class="jumbotron text-center">
+    <h1>El Chancho que todo lo ve</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <h2>El chancho</h2>
+        <img src="https://redescubriendoelidioma.files.wordpress.com/2016/01/chancho.jpg" title="el chancho" alt="el chancho" des="un chancho feliz" width="100%"/>
+      </div>
+      <div class="col-xs-12 col-sm-6 philosophy__container">
+        <h2>Filosofía del chancho</h2>
+        <p class="pork_philosophy">Las heridas que la guerra causa en el alma, esas, no las cura la alquimia.</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
